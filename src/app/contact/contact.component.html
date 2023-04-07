@@ -1,0 +1,19 @@
+<main id="contact">
+  <div class="contact-headline">
+    <h2>
+      Contact Me
+    </h2>
+    <span>Get in touch via the form below, or by emailing <a
+        href="mailto:klimtmartin@hotmail.de">klimtmartin@hotmail.de</a>
+    </span>
+  </div>
+
+  <form (submit)="sendMail()" ngNativeValidate #myForm>
+    <input required type="text" name="contactName" #contactName placeholder=" Your name">
+    <input required type="email" name="contactMail" #contactMail placeholder=" Your email">
+    <textarea required name="contactText" #contactText placeholder="Your message"></textarea>
+    <button [class.deactivate]="Btn" #sendBtn>Send</button>
+    <div *ngIf="message" class="sendmessage"><span> Your message was sent successfully.</span></div>
+  </form>
+
+</main>

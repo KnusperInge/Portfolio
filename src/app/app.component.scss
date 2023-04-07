@@ -1,0 +1,39 @@
+mat-sidenav-container {
+  top: 80px;
+  bottom: 80px;
+  background-color: #31333b;
+  height: calc(100vh - 80px);
+  max-height: 100%;
+}
+mat-sidenav {
+  position: fixed;
+  width: 50%;
+  background-color: #31333b;
+  height: 100vh;
+  max-height: 100%;
+
+  nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+
+    a {
+      text-decoration: none;
+      color: #fdfdfd;
+      font-family: Overpass;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 19.36px;
+    }
+  }
+}
+
+mat-sidenav-content {
+  z-index: 1;
+  min-height: calc(100dvh - 80px);
+  max-height: 100%;
+  overflow-y: scroll;
+}

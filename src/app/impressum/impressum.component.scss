@@ -1,0 +1,61 @@
+.scrollbar {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  height: calc(100% - 80px);
+  scrollbar-color: #ffc86b #34353a;
+  scrollbar-width: thin;
+  &::-webkit-scrollbar {
+    background-color: #34353a;
+    width: 8px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #ffc86b;
+    border-radius: 3px;
+  }
+}
+@media screen and (max-width: 990px) {
+  .scrollbar::-webkit-scrollbar {
+    width: 0;
+  }
+}
+.impressum {
+  margin-top: 100px;
+  margin-bottom: 90px;
+  height: 100%;
+  max-width: 100%;
+  padding-left: 119px;
+  padding-right: 212px;
+  color: #c0c0c0;
+  line-height: 30px;
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: #ffc86b;
+    font-family: Overpass;
+  }
+  span {
+    font-family: Overpass;
+    font-size: 18px;
+    line-height: 29.4px;
+    font-weight: 300;
+  }
+}
+
+.imprint-head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 990px) {
+  .impressum {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

@@ -1,0 +1,30 @@
+header{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top:0;
+  z-index: 10;
+  max-width: 100%;
+  height: 80px;
+border-bottom: 1px solid #1f2125 ;
+background-color: #34353a;
+display: flex;
+align-items: center;
+justify-content: space-between;
+img{
+  width: 100px; 
+  padding-left:12px ;
+}
+.mat-icon{
+ font-size: 40px;
+ height: fit-content;
+ padding-right:32px ;
+ color: #fdfdfd;
+
+
+}
+
+
+}
+
+

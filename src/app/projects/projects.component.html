@@ -1,0 +1,23 @@
+<main>
+  <H2>Portfolio</H2>
+  <section>
+    <div *ngFor="let project of projects let i=index">
+      <div class="card" (mouseenter)="hoverStatus(i)" *ngIf="project.ready" (touchstart)="touchmove(i)" style="background-image: url('{{project.img}}')
+    ;">
+        <div @show *ngIf="cursorPos && id===i" class="text-box" (mouseleave)="cursorPos=false"
+          (touchend)="cursorPos=false">
+          <div class="txt-box">
+            <h3>{{project.name}}</h3>
+            <h4>{{project.technics}}</h4>
+            <span>{{project.desc}}</span>
+          </div>
+
+          <div class="btn-box">
+            <a type="button" href="{{project.link}}" target="_blank">Test it</a>
+            <a type="button" href="{{project.github}}" target="_blank">Git-Hub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
