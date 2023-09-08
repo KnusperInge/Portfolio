@@ -1,5 +1,5 @@
 <main>
-  <H2>Portfolio</H2>
+  <H2>Projects</H2>
   <section>
     <div *ngFor="let project of projects let i=index">
       <div class="card" (mouseenter)="hoverStatus(i)" *ngIf="project.ready" (touchstart)="touchmove(i)" style="background-image: url('{{project.img}}')

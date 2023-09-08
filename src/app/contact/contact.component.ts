@@ -19,19 +19,14 @@ export class ContactComponent {
     let Message = this.contactText.nativeElement;
 
     this.disableElemts(Name, Mail, Message);
-
-    console.log('Mail', this.Button);
     let fd = new FormData();
     fd.append('contactName', Name.value);
     fd.append('contactMail', Mail.value);
     fd.append('contactText', Message.value);
-    await fetch(
-      'https://martin-klimt.developerakademie.net/send_mail/send_mail.php',
-      {
-        method: 'POST',
-        body: fd,
-      }
-    );
+    await fetch('https://martinklimt.de/send_mail/send_mail.php', {
+      method: 'POST',
+      body: fd,
+    });
     Name.value = '';
     Mail.value = '';
     Message.value = '';
